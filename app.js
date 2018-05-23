@@ -25,7 +25,6 @@ btn.addEventListener('click', function(e){
         insultText.innerHTML = `<h3>Ha ha ha, you are such a dotard. You don't even know your own name!</h3>`;
     kimage.setAttribute('src', `${randImage}`);
     }
-
 });
 
 // Remove excess spaces
@@ -46,5 +45,8 @@ for(let i = 1; i < insultArr.length; i++){
 
 for(let i = 2; i < insultArr.length; i++){
     thirdWord.push(insultArr[i]);
+    i += 2;
 }
+
+console.log(thirdWord);
 
