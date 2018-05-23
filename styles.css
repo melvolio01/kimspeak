@@ -35,7 +35,13 @@ h3 {
 
 button {
     font-family: var(--secondaryfont);
-    color: var(--maintextcolor);;
+    color: var(--maintextcolor);
+    letter-spacing: var(--letterspacing);
+}
+
+button:visited {
+    font-family: var(--secondaryfont);
+    color: var(--maintextcolor);
     letter-spacing: var(--letterspacing);
 }
 
