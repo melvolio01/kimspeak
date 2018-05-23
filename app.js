@@ -8,19 +8,29 @@ let firstWord = [];
 let secondWord = [];
 let thirdWord = [];
 let imageSrcs = ['images/kim.png', 'images/rocketman.png', 'images/flyingkim.png', 'images/cartmankim.png', 'images/trumpkim.png'];
+let consonant = 'a';
+let vowel = 'an';
+let indefiniteArticle;
 
 btn.addEventListener('click', function(e){
     if(victim.value !== '') {
-    let randImage = imageSrcs[Math.floor(Math.random() * imageSrcs.length)];
-    let randFirst = firstWord[Math.floor(Math.random() * firstWord.length)];
-    let randSecond = secondWord[Math.floor(Math.random() * secondWord.length)];
-    let randThird = thirdWord[Math.floor(Math.random() * thirdWord.length)];
+        let randImage = imageSrcs[Math.floor(Math.random() * imageSrcs.length)];
+        let randFirst = firstWord[Math.floor(Math.random() * firstWord.length)];
+        let randSecond = secondWord[Math.floor(Math.random() * secondWord.length)];
+        let randThird = thirdWord[Math.floor(Math.random() * thirdWord.length)];
+        let initial = randFirst.charAt(0);
+         if (initial !== ('a'||'e'||'i'||'o'||'u')){
+            console.log(initial);
+            indefiniteArticle = consonant;
+            } else {
+            indefiniteArticle = vowel;
+            }
+        yourName = victim.value;
+        victim.value = '';
+            
+        insultText.innerHTML = `<h3>${yourName}, you are ${indefiniteArticle} ${randFirst}, ${randSecond} ${randThird}!</h3>`;
 
-    yourName = victim.value;
-    victim.value = '';
-
-    insultText.innerHTML = `<h3>${yourName}, you are a ${randFirst}, ${randSecond} ${randThird}!</h3>`;
-    kimage.setAttribute('src', `${randImage}`);
+        kimage.setAttribute('src', `${randImage}`);
     } else {
         insultText.innerHTML = `<h3>Ha ha ha, you are such a dotard. You don't even know your own name!</h3>`;
     kimage.setAttribute('src', `${randImage}`);
@@ -48,5 +58,4 @@ for(let i = 2; i < insultArr.length; i++){
     i += 2;
 }
 
-console.log(thirdWord);
 
