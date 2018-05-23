@@ -1,0 +1,69 @@
+:root { 
+    --mainfont: 'Squada One', cursive;
+    --secondaryfont: 'Fjalla One', sans-serif;
+    --maincolor: #49010F;
+    --secondarycolor: #fffde7;
+    --maintextcolor: #C16200;
+    --letterspacing: 4px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#name-box {
+    background-color: var(--secondarycolor);
+    color: var(--maincolor);
+    text-align: center;
+    font-family: var(--secondaryfont);
+    letter-spacing: var(--letterspacing);
+    height: 40px;
+    font-size: 14px;
+}
+
+h1, h5 {
+    font-family: var(--mainfont);
+    color: var(--maintextcolor);
+    letter-spacing: var(--letterspacing);
+}
+
+h3 {
+    letter-spacing: var(--letterspacing);
+}
+
+button {
+    font-family: var(--secondaryfont);
+    color: var(--maintextcolor);;
+    letter-spacing: var(--letterspacing);
+}
+
+.insult-div {
+    background-color: var(--maincolor);
+    text-align: center;
+    padding-top: 2%;
+    height: 35vh;
+}
+
+#kim-im {
+    height: 200px;
+}
+
+#insult {
+    color: var(--maincolor);
+    font-family: var(--mainfont);
+}
+
+#wide-container {
+    background-color: var(--maincolor);
+    padding-bottom: 2%;
+}
+
+.response-div {
+    background-color: var(--secondarycolor);
+    padding-top: 5%;
+    text-align: center;
+    margin-bottom: 0;
+    height: 55vh;
+}
