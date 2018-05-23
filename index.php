@@ -1,0 +1,1 @@
+<?php import_once('home.html'); ?>

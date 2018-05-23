@@ -10,6 +10,7 @@ let thirdWord = [];
 let imageSrcs = ['images/kim.png', 'images/rocketman.png', 'images/flyingkim.png', 'images/cartmankim.png', 'images/trumpkim.png'];
 
 btn.addEventListener('click', function(e){
+    if(victim.value !== '') {
     let randImage = imageSrcs[Math.floor(Math.random() * imageSrcs.length)];
     let randFirst = firstWord[Math.floor(Math.random() * firstWord.length)];
     let randSecond = secondWord[Math.floor(Math.random() * secondWord.length)];
@@ -20,6 +21,10 @@ btn.addEventListener('click', function(e){
 
     insultText.innerHTML = `<h3>${yourName}, you are a ${randFirst}, ${randSecond} ${randThird}!</h3>`;
     kimage.setAttribute('src', `${randImage}`);
+    } else {
+        insultText.innerHTML = `<h3>Ha ha ha, you are such a dotard. You don't even know your own name!</h3>`;
+    kimage.setAttribute('src', `${randImage}`);
+    }
 
 });
 
